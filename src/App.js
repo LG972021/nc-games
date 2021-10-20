@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import TitleHeader from "./Components/Title-Header";
 import Home from "./Components/Home";
@@ -20,6 +20,9 @@ function App() {
           </Route>
           <Route exact path="/reviews/id/:review_id">
             <SingleReview />
+          </Route>
+          <Route path="/">
+            <Redirect to="/reviews" />
           </Route>
         </Switch>
       </BrowserRouter>

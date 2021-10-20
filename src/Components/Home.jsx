@@ -8,8 +8,10 @@ import { Link } from "react-router-dom";
 const Home = () => {
   const [reviewsList, setReviewsList] = useState([]);
   const [searchReviewId, SetSearchReviewId] = useState("");
-  const { category } = useParams();
   const [searchButtonClass, setSearchButtonClass] = useState("CanNotClick");
+  const [isError, setIsError] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const { category } = useParams();
 
   const createSearchURL = () => {
     if (category === undefined) {
@@ -27,14 +29,19 @@ const Home = () => {
   const numRegex = /^\d+$/;
 
   useEffect(() => {
+    setIsLoading(true);
+    setIsError(false);
     axios
       .get(searchUrl)
       .then((response) => {
         setReviewsList(response.data.reviews);
+        setIsLoading(false);
 
         return response.data.reviews;
       })
       .catch((error) => {
+        setIsLoading(false);
+        setIsError(true);
         console.log(error);
       });
   }, [category, searchUrl]);
@@ -58,51 +65,72 @@ const Home = () => {
     event.preventDefault();
   };
 
-  return (
-    <section className="Home">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="item-name">Search by Review Id</label>
-        <input
-          type="text"
-          required
-          placeholder="Please enter a Review_Id"
-          id="item-name"
-          name="name"
-          onChange={handleChange}
-          value={searchReviewId}
-        ></input>
-        <Link
-          to={`/reviews/id/${searchReviewId}`}
-          className={searchButtonClass}
-        >
-          <button
-            onClick={() => {
-              console.log("Click");
-            }}
-          >
-            Search Id {searchButtonClass}
-          </button>
-        </Link>
-      </form>
-      <ul className="Home__Reviews__List">
-        {reviewsList.map((review) => {
-          return (
-            <li className="Home__Reviews__List__Review" key={review.review_id}>
-              <Link
-                className="Home__Reviews__Links"
-                to={`/reviews/id/${review.review_id}`}
+  if (isError === true) {
+    return (
+      <section className="SingleReview">
+        <h1>We're Sorry, Something Went Wrong...</h1>
+      </section>
+    );
+  }
+
+  if (isLoading === true) {
+    return <p className="LoadingBar"> Loading...</p>;
+  } else {
+    return (
+      <section className="Home">
+        <div className="Home__Search__Form__Container">
+          <form className="Home__Search__Form" onSubmit={handleSubmit}>
+            <label className="Home__Search__Form__Label" htmlFor="item-name">
+              Search by Review Id:
+            </label>
+            <input
+              type="text"
+              required
+              placeholder="Please enter a Review_Id"
+              id="item-name"
+              name="name"
+              onChange={handleChange}
+              value={searchReviewId}
+              className="Home__Search__Form__SearchBar"
+            ></input>
+            <Link
+              to={`/reviews/id/${searchReviewId}`}
+              className={searchButtonClass}
+            >
+              <button
+                className="Home__Search__Form__SubmitButton"
+                onClick={() => {
+                  console.log("Click");
+                }}
               >
-                <h2>{review.title}</h2>
-                <p> by {review.owner} </p>
-                <p> posted at {review.created_at} </p>
-                <p>Review id: {review.review_id}</p>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </section>
-  );
+                Search Id {searchButtonClass}
+              </button>
+            </Link>
+          </form>
+        </div>
+        <ul className="Home__Reviews__List">
+          {reviewsList.map((review) => {
+            return (
+              <li
+                className="Home__Reviews__List__Review"
+                key={review.review_id}
+              >
+                <Link
+                  className="Home__Reviews__Links"
+                  to={`/reviews/id/${review.review_id}`}
+                >
+                  <h2>{review.title}</h2>
+                  <p> by {review.owner} </p>
+                  <p> posted at {review.created_at} </p>
+                  <p>Review id: {review.review_id}</p>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    );
+  }
 };
 
 export default Home;

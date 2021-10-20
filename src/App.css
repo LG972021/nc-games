@@ -12,6 +12,12 @@
     color: #61dafb;
   }
 
+  .LoadingBar {
+    color: black;
+    font-size: 50px;
+    padding-bottom: 770px;
+  }
+
   .Title {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -26,7 +32,7 @@
     text-align-last: center;
     display: inline-block;
     vertical-align: middle;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
     height: 100px;
     width: 150px;
   }
@@ -64,12 +70,45 @@
     justify-content: center;
     padding: 40px;
     border-radius: 30px;
-    margin-top: 70px;
+    margin-top: 50px;
   }
 
   .Home__Reviews__Links {
     text-decoration: none;
     color: black;
+  }
+
+  .Home__Search__Form__Container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .Home__Search__Form {
+    background-color: rgb(101, 112, 134);
+    max-width: fit-content;
+    display: block;
+    margin-inline: auto;
+    padding-top: 14px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+    justify-content: center;
+    border-radius: 15px;
+    margin-top: 50px;
+  }
+
+  .Home__Search__Form__Label {
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: white;
+  }
+
+  .Home__Search__Form__SearchBar {
+    margin-top: 10px;
+  }
+
+  .Home__Search__Form__SubmitButton {
+    margin-top: 10px;
   }
 
   .CanNotClick {
@@ -84,6 +123,252 @@
   .NavBar {
     background-color: rgb(101, 112, 134);
     height: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .NavBar__Links {
+    padding-bottom: -10px;
+    padding: 10px;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    top: 14px;
+  }
+
+  .SingleReview {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 200px;
+  }
+  .SingleReview__Image {
+    margin-top: 48px;
+    border-radius: 35px;
+    max-height: 1000px;
+    max-width: 1000px;
+  }
+
+  .SingleReview__Fail__Image {
+    margin-top: 48px;
+    border-radius: 35px;
+    max-height: 300px;
+    max-width: 300px;
+  }
+
+  .SingleReview__Title {
+    font-size: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  .SingleReview__Text_Contents {
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 60px;
+    margin-left: 120px;
+    margin-right: 120px;
+    border-radius: 10px;
+  }
+
+  .SingleReview__Fail__Text_Contents {
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 60px;
+    margin-left: 500px;
+    margin-right: 500px;
+    border-radius: 10px;
+  }
+
+  .SingleReview__ReviewBody {
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 25px;
+  }
+
+  .SingleReview__AuthorCard__Image {
+    height: 100px;
+    border-radius: 25px;
+  }
+
+  .SingleReview__Fail__AuthorCard__Image {
+    height: 100px;
+    border-radius: 25px;
+  }
+
+  .SingleReview__AuthorCard__Author {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .SingleReview__AuthorCard__PostedAt {
+    margin-top: 0px;
+  }
+
+  .Single__Review__Comments__List {
+  }
+
+  .Single__Review__Comment {
+    background-color: rgba(240, 240, 238, 0.9);
+    max-width: 500px;
+    display: block;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    margin-top: 35px;
+    margin-inline: auto;
+  }
+
+  .Single__Review__Comments___Heading {
+    color: grey;
+    margin-bottom: 0px;
+    margin-top: 18.72px;
+    padding-top: 25px;
+    padding-left: 40px;
+  }
+
+  .SingleReview__Comments__VoteButtonImage {
+    max-width: 30px;
+
+    margin-inline: auto;
+    border-radius: 20px;
+  }
+
+  .Single__Review__Comments___Container {
+    background-color: white;
+    padding-bottom: 50px;
+    max-width: 600px;
+    padding-right: 40px;
+    margin-inline: auto;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 810px) {
+  .App {
+    text-align: center;
+    background-image: url(https://i.stack.imgur.com/jGlzr.png);
+    background-size: 4500px 9000px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+
+  .Title {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    text-align: center;
+    padding-top: 0px;
+    margin: 0px;
+  }
+
+  .Title img {
+    color: rgb(0, 0, 0);
+    text-align-last: center;
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 10px;
+    height: 100px;
+    width: 150px;
+  }
+  .Title h1 {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    text-align: center;
+    padding-top: 0px;
+    margin-bottom: 0;
+  }
+
+  .Title h1 {
+    padding-bottom: 0px;
+  }
+
+  .Home__Hello__title {
+    text-align: center;
+  }
+
+  .Home__Reviews__List {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 200px;
+  }
+
+  .Home__Reviews__List__Review {
+    background-color: rgba(240, 240, 238, 0.9);
+    max-width: fit-content;
+    display: block;
+    margin-inline: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 30px;
+    margin-top: 50px;
+  }
+
+  .Home__Reviews__Links {
+    text-decoration: none;
+    color: black;
+  }
+
+  .Home__Search__Form__Container {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 18px;
+  }
+
+  .Home__Search__Form {
+    background-color: rgb(101, 112, 134);
+    max-width: fit-content;
+    display: block;
+    margin-inline: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 50px;
+  }
+
+  .Home__Search__Form__Label {
+    padding-bottom: 10px;
+    padding-right: 10px;
+  }
+
+  .Home__Search__Form__SearchBar {
+    margin-top: 10px;
+  }
+
+  .Home__Search__Form__SubmitButton {
+    margin-top: 10px;
+  }
+
+  .CanNotClick {
+    pointer-events: none;
+    background-color: red;
+  }
+
+  .CanClick {
+    background-color: green;
+  }
+
+  .NavBar {
+    background-color: rgb(101, 112, 134);
+    height: 50px;
+    padding-bottom: 15px;
   }
 
   .NavBar__Links {
