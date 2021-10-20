@@ -28,26 +28,26 @@ const SingleReview = () => {
 
         console.log(error);
       });
+  }, [review_id, review.votes]);
+
+  useEffect(() => {
+    setIsLoading(true);
+    setIsError(false);
+    axios
+      .get(
+        `https://nc-board-game-reviewing.herokuapp.com/api/reviews/${review_id}/comments`
+      )
+      .then((response) => {
+        setReviewCommentList(response.data.comments);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        setIsLoading(false);
+        setIsError(true);
+
+        console.log(error);
+      });
   }, [review_id]);
-
-  // useEffect(() => {
-  //   setIsLoading(true);
-  //   setIsError(false);
-  //   axios
-  //     .get(
-  //       `https://nc-board-game-reviewing.herokuapp.com/api/reviews/${review_id}/comments`
-  //     )
-  //     .then((response) => {
-  //       setReviewCommentList(response.data.comments);
-  //       setIsLoading(false);
-  //     })
-  //     .catch((error) => {
-  //       setIsLoading(false);
-  //       setIsError(true);
-
-  //       console.log(error);
-  //     });
-  // }, [review_id]);
 
   if (isError === true) {
     return (

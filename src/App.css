@@ -235,9 +235,14 @@
     padding-left: 40px;
   }
 
-  .SingleReview__Comments__VoteButtonImage {
+  .SingleReview__Comments__VoteButtonImage__NoPress {
     max-width: 30px;
+    margin-inline: auto;
+    border-radius: 20px;
+  }
 
+  .SingleReview__Comments__VoteButtonImage__Press {
+    max-width: 60px;
     margin-inline: auto;
     border-radius: 20px;
   }
