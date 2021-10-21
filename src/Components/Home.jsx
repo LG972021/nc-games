@@ -46,7 +46,7 @@ const Home = () => {
       });
   }, [category, searchUrl]);
 
-  console.log(searchButtonClass);
+  // console.log(searchButtonClass);
 
   const handleChange = (event) => {
     SetSearchReviewId(event.target.value);
@@ -78,6 +78,19 @@ const Home = () => {
   } else {
     return (
       <section className="Home">
+        <Link
+          to={`/reviews/categories/${category}?order_by=created_at`}
+          className="CanClick"
+        >
+          <button
+            className="Home__Search__Form__SubmitButton"
+            onClick={() => {
+              console.log("Click");
+            }}
+          >
+            Order By: created_at
+          </button>
+        </Link>
         <div className="Home__Search__Form__Container">
           <form className="Home__Search__Form" onSubmit={handleSubmit}>
             <label className="Home__Search__Form__Label" htmlFor="item-name">
