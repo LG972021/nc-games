@@ -1,22 +1,24 @@
 import { useState } from "react";
 import axios from "axios";
 
-const Voter = ({ review }) => {
-  const [isLoading, setIsLoading] = useState(false);
+const Voter = ({ review, reviewLoading, setReviewLoading }) => {
+  // const [isLoading, setIsLoading] = useState(false);
   const [votePressed, setVotePressed] = useState(false);
-  const [votes, setVotes] = useState(review.votes);
+  const [voteChange, setVoteChange] = useState(0);
   const [voteClass, setVoteClass] = useState(
     "SingleReview__Comments__VoteButtonImage__NoPress"
   );
 
-  console.log(votePressed);
+  console.log(review.votes);
 
-  if (isLoading === true) {
+  // console.log(votePressed);
+
+  if (reviewLoading === true) {
     return <p className="LoadingBar"> Loading...</p>;
   } else {
     return (
       <section className="Voter">
-        <p>Votes: {votes}</p>
+        <p>Votes: {review.votes + voteChange}</p>
         <img
           className={voteClass}
           alt="Vote Button"
@@ -24,7 +26,7 @@ const Voter = ({ review }) => {
           onClick={() => {
             if (votePressed === false) {
               console.log("Click");
-              setVotes((currentVotes) => {
+              setVoteChange((currentVotes) => {
                 console.log(currentVotes + 1);
                 return currentVotes + 1;
               });
@@ -37,10 +39,10 @@ const Voter = ({ review }) => {
                 { inc_votes: 1 }
               )
               .then((response) => {
-                setIsLoading(false);
+                setReviewLoading(false);
               })
               .catch((error) => {
-                setIsLoading(false);
+                setReviewLoading(false);
                 console.log(error);
               });
           }}

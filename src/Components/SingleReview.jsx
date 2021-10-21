@@ -3,53 +3,36 @@ import axios from "axios";
 import { useParams } from "react-router";
 import Icon from "../Icon.png";
 import Voter from "./Voter";
+import Comments from "./Comments";
 
 const SingleReview = () => {
   const [review, setReview] = useState({});
-  const [reviewCommentList, setReviewCommentList] = useState([]);
-  const [isError, setIsError] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
+
+  const [ReviewError, setReviewError] = useState(true);
+  const [reviewLoading, setReviewLoading] = useState(true);
   const { review_id } = useParams();
 
   useEffect(() => {
-    setIsLoading(true);
-    setIsError(false);
+    setReviewLoading(true);
+    setReviewError(false);
     axios
       .get(
         `https://nc-board-game-reviewing.herokuapp.com/api/reviews/${review_id}`
       )
       .then((response) => {
         setReview(response.data.review);
-        setIsLoading(false);
+
+        setReviewLoading(false);
       })
       .catch((error) => {
-        setIsLoading(false);
-        setIsError(true);
-
-        console.log(error);
-      });
-  }, [review_id, review.votes]);
-
-  useEffect(() => {
-    setIsLoading(true);
-    setIsError(false);
-    axios
-      .get(
-        `https://nc-board-game-reviewing.herokuapp.com/api/reviews/${review_id}/comments`
-      )
-      .then((response) => {
-        setReviewCommentList(response.data.comments);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        setIsLoading(false);
-        setIsError(true);
+        setReviewLoading(false);
+        setReviewError(true);
 
         console.log(error);
       });
   }, [review_id]);
 
-  if (isError === true) {
+  if (ReviewError === true) {
     return (
       <section className="SingleReview">
         <img
@@ -74,7 +57,7 @@ const SingleReview = () => {
     );
   }
 
-  if (isLoading === true) {
+  if (reviewLoading === true) {
     return <p className="LoadingBar"> Loading...</p>;
   } else {
     return (
@@ -103,28 +86,18 @@ const SingleReview = () => {
               posted at {review.created_at}{" "}
             </p>
           </div>
-          <Voter review={review} />
-
+          {Object.keys(review).length ? (
+            <Voter
+              review={review}
+              reviewLoading={reviewLoading}
+              setReviewLoading={setReviewLoading}
+            />
+          ) : (
+            <p>Loading Voter</p>
+          )}
           <p>Review id: {review.review_id}</p>
         </div>
-        <div className="Single__Review__Comments___Container">
-          <h3 className="Single__Review__Comments___Heading">Comments</h3>
-          <ul className="Single__Review__Comments__List">
-            {reviewCommentList.map((comment) => {
-              return (
-                <li
-                  className="Single__Review__Comment"
-                  key={comment.comment_id}
-                >
-                  <h2>{comment.body}</h2>
-                  <p> - {comment.author} </p>
-                  <p> posted {comment.created_at} </p>
-                  <p>Comment id: {comment.comment_id}</p>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <Comments review_id={review.review_id} />
       </section>
     );
   }
