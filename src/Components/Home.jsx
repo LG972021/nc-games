@@ -14,8 +14,6 @@ const Home = () => {
   const { category, sort_by } = useParams();
 
   const createSearchURL = () => {
-    console.log(category);
-    console.log(sort_by);
     if (category === undefined && sort_by === undefined) {
       // console.log("https://nc-board-game-reviewing.herokuapp.com/api/reviews");
       return "https://nc-board-game-reviewing.herokuapp.com/api/reviews";
@@ -29,7 +27,6 @@ const Home = () => {
   };
 
   const searchUrl = createSearchURL();
-  console.log(searchUrl);
   const numRegex = /^\d+$/;
 
   useEffect(() => {
@@ -46,7 +43,6 @@ const Home = () => {
       .catch((error) => {
         setIsLoading(false);
         setIsError(true);
-        console.log(error);
       });
   }, [category, searchUrl]);
 
@@ -115,22 +111,12 @@ const Home = () => {
           <>
             {" "}
             <Link to={`/reviews/sort_by/created_at`} className="CanClick">
-              <button
-                className="Home__Search__Form__SubmitButton"
-                onClick={() => {
-                  console.log("Click");
-                }}
-              >
+              <button className="Home__Search__Form__SubmitButton">
                 Sort By: created_at
               </button>
             </Link>
             <Link to={`/reviews/sort_by/votes`} className="CanClick">
-              <button
-                className="Home__Search__Form__SubmitButton"
-                onClick={() => {
-                  console.log("Click");
-                }}
-              >
+              <button className="Home__Search__Form__SubmitButton">
                 Sort By: Votes
               </button>
             </Link>{" "}
@@ -156,12 +142,7 @@ const Home = () => {
               to={`/reviews/id/${searchReviewId}`}
               className={searchButtonClass}
             >
-              <button
-                className="Home__Search__Form__SubmitButton"
-                onClick={() => {
-                  console.log("Click");
-                }}
-              >
+              <button className="Home__Search__Form__SubmitButton">
                 Search Id {searchButtonClass}
               </button>
             </Link>

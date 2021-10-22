@@ -2,7 +2,7 @@
 
 Hello, and thank you for looking at my project repository.
 
-You can find a hosted version of this project here: https://nc-board-game\_\_PLACEHOLDER
+You can find a hosted version of this project here: https://pedantic-wiles-515bfa.netlify.app/reviews
 
 You can find the repository of the back-end api project this project uses here: https://github.com/LG972021/NC_Board_Game_API
 
@@ -28,15 +28,18 @@ To install the dependencies this project relies on, please follow the instructio
      In the VS Code terminal
         -run the command 'npm i'
 
-<!-- follow the readme instructions to easily run the project locally.
-find a link to the hosted version of the project in the readme. (use a placeholder if not yet hosted!)
-find a link to the back-end repository of the project in the readme.
-find a link to the hosted version of the back-end project in the readme.
+<h2>Requirements</h2>
 
-## Available Scripts
+The versions of Node.js and other softwares used to create this project, and thus, the minimum versions of Node.js required to reliably run this project are:
 
-In the project directory, you can run:
+    - Node.js - v16.6.1
 
-### `npm run eject`
+    - Axios - psql (P 12.8 (Ubuntu 12.8-0ubuntu0.20.04.1)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!** -->
+    - React - v17.0.2
+
+    - React-dom - v17.0.2
+
+    - React-router-dom - v5.3.0
+
+Thank you again for looking at my Front-End project.

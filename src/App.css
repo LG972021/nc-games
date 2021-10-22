@@ -1382,7 +1382,7 @@
   }
 
   .SingleReview__Title {
-    font-size: 60;
+    font-size: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
     padding-right: 40px;
@@ -1687,7 +1687,7 @@
   }
 
   .SingleReview__Title {
-    font-size: 60;
+    font-size: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
     padding-right: 30px;

@@ -8,8 +8,6 @@ const Comments = ({ review_id }) => {
   const [commentsError, setCommentsError] = useState(false);
   const [commentAddError, setCommentAddError] = useState(false);
 
-  console.log(commentAddError);
-
   useEffect(() => {
     setCommentsLoading(true);
     setCommentsError(false);
@@ -24,8 +22,6 @@ const Comments = ({ review_id }) => {
       .catch((error) => {
         setCommentsLoading(false);
         setCommentsError(true);
-
-        console.log(error);
       });
   }, [review_id]);
 

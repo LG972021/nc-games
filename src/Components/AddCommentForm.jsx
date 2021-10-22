@@ -13,7 +13,6 @@ const AddCommentForm = ({
     setNewComment((currentNewComment) => {
       const updatedNewComment = { ...currentNewComment };
       updatedNewComment[event.target.name] = event.target.value;
-      console.log(updatedNewComment);
       return updatedNewComment;
     });
   };
@@ -27,7 +26,6 @@ const AddCommentForm = ({
         newComment
       )
       .then((response) => {
-        console.log("post successful");
         setReviewCommentList((currentReviewCommentList) => {
           const updatedReviewCommentList = [...currentReviewCommentList];
           updatedReviewCommentList.push(response.data.comment);
@@ -37,7 +35,6 @@ const AddCommentForm = ({
         setCommentAddError(false);
       })
       .catch((error) => {
-        console.log("post failed");
         setCommentAddError(true);
         setCommentsLoading(false);
       });
@@ -71,14 +68,7 @@ const AddCommentForm = ({
           className="AddCommentForm_InputBar"
         ></input>
       </div>
-      <button
-        className="AddCommentForm_SubmitButton"
-        onClick={() => {
-          console.log("Click");
-        }}
-      >
-        Submit Comment
-      </button>
+      <button className="AddCommentForm_SubmitButton">Submit Comment</button>
     </form>
   );
 };
