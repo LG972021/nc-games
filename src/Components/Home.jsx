@@ -11,21 +11,25 @@ const Home = () => {
   const [searchButtonClass, setSearchButtonClass] = useState("CanNotClick");
   const [isError, setIsError] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
-  const { category } = useParams();
+  const { category, sort_by } = useParams();
 
   const createSearchURL = () => {
-    if (category === undefined) {
+    console.log(category);
+    console.log(sort_by);
+    if (category === undefined && sort_by === undefined) {
       // console.log("https://nc-board-game-reviewing.herokuapp.com/api/reviews");
       return "https://nc-board-game-reviewing.herokuapp.com/api/reviews";
-    } else {
-      // console.log(
-      //   `https://nc-board-game-reviewing.herokuapp.com/api/reviews?cat=${category}`
-      // );
+    } else if (sort_by === undefined) {
       return `https://nc-board-game-reviewing.herokuapp.com/api/reviews?cat=${category}`;
+    } else if (category === undefined) {
+      return `https://nc-board-game-reviewing.herokuapp.com/api/reviews?sort_by=${sort_by}`;
+    } else {
+      return `https://nc-board-game-reviewing.herokuapp.com/api/reviews?cat=${category}&sort_by=${sort_by}`;
     }
   };
 
   const searchUrl = createSearchURL();
+  console.log(searchUrl);
   const numRegex = /^\d+$/;
 
   useEffect(() => {
@@ -78,19 +82,61 @@ const Home = () => {
   } else {
     return (
       <section className="Home">
-        <Link
-          to={`/reviews/categories/${category}?order_by=created_at`}
-          className="CanClick"
-        >
-          <button
-            className="Home__Search__Form__SubmitButton"
-            onClick={() => {
-              console.log("Click");
-            }}
-          >
-            Order By: created_at
-          </button>
-        </Link>
+        {category !== undefined ? (
+          <>
+            <Link
+              to={`/reviews/categories/${category}/sort_by/created_at`}
+              className="CanClick"
+            >
+              <button
+                className="Home__Search__Form__SubmitButton"
+                onClick={() => {
+                  console.log("Click");
+                }}
+              >
+                Sort By: created_at
+              </button>
+            </Link>
+            <Link
+              to={`/reviews/categories/${category}/sort_by/votes`}
+              className="CanClick"
+            >
+              <button
+                className="Home__Search__Form__SubmitButton"
+                onClick={() => {
+                  console.log("Click");
+                }}
+              >
+                Sort By: Votes
+              </button>
+            </Link>{" "}
+          </>
+        ) : (
+          <>
+            {" "}
+            <Link to={`/reviews/sort_by/created_at`} className="CanClick">
+              <button
+                className="Home__Search__Form__SubmitButton"
+                onClick={() => {
+                  console.log("Click");
+                }}
+              >
+                Sort By: created_at
+              </button>
+            </Link>
+            <Link to={`/reviews/sort_by/votes`} className="CanClick">
+              <button
+                className="Home__Search__Form__SubmitButton"
+                onClick={() => {
+                  console.log("Click");
+                }}
+              >
+                Sort By: Votes
+              </button>
+            </Link>{" "}
+          </>
+        )}
+
         <div className="Home__Search__Form__Container">
           <form className="Home__Search__Form" onSubmit={handleSubmit}>
             <label className="Home__Search__Form__Label" htmlFor="item-name">

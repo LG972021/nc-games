@@ -15,7 +15,13 @@ function App() {
           <Route exact path="/reviews">
             <Home />
           </Route>
+          <Route exact path="/reviews/sort_by/:sort_by">
+            <Home />
+          </Route>
           <Route exact path="/reviews/categories/:category">
+            <Home />
+          </Route>
+          <Route exact path="/reviews/categories/:category/sort_by/:sort_by">
             <Home />
           </Route>
           <Route exact path="/reviews/id/:review_id">

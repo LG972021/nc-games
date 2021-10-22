@@ -78,7 +78,7 @@
     justify-content: center;
     padding: 40px;
     border-radius: 30px;
-    margin-top: 50px;
+    margin-top: 35px;
   }
 
   .Home__Reviews__Links {
@@ -102,7 +102,7 @@
     padding-right: 40px;
     justify-content: center;
     border-radius: 15px;
-    margin-top: 50px;
+    margin-top: 15px;
   }
 
   .Home__Search__Form__Label {
@@ -298,7 +298,7 @@
   }
 }
 
-@media (max-width: 811px) {
+@media (max-width: 1300px) {
   .App {
     text-align: center;
     /* background-image: url(https://i.stack.imgur.com/jGlzr.png); */
@@ -376,7 +376,7 @@
     justify-content: center;
     padding: 40px;
     border-radius: 30px;
-    margin-top: 50px;
+    margin-top: 35px;
   }
 
   .Home__Reviews__Links {
@@ -400,7 +400,7 @@
     padding-right: 40px;
     justify-content: center;
     border-radius: 15px;
-    margin-top: 50px;
+    margin-top: 15px;
   }
 
   .Home__Search__Form__Label {
@@ -430,18 +430,23 @@
     background-color: rgb(101, 112, 134);
     height: 50px;
     padding-top: 0px;
-    padding-bottom: 15px;
+    padding-bottom: 0px;
   }
 
   .NavBar__Links {
     padding-bottom: -10px;
-    margin-right: 10px;
-    padding: 10px;
+    margin-right: 20px;
+    padding: 0px;
     position: relative;
     color: white;
     font-weight: bold;
     top: 14px;
+    display: inline-table;
   }
+
+  /* .NavBar__Links_Container {
+    display: list-item;
+  } */
 
   .SingleReview {
     text-align: center;
@@ -495,11 +500,315 @@
     background-color: white;
     margin-left: 50px;
     margin-right: 50px;
-    font-size: 25px;
+    font-size: 15px;
   }
 
   .SingleReview__AuthorCard__Image {
+    height: 50px;
+    border-radius: 25px;
+  }
+
+  .SingleReview__Fail__AuthorCard__Image {
+    height: 50px;
+    border-radius: 25px;
+  }
+
+  .SingleReview__AuthorCard__Author {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .SingleReview__AuthorCard__PostedAt {
+    margin-top: 0px;
+  }
+
+  .Single__Review__Comments__List {
+  }
+
+  .Single__Review__Comment {
+    background-color: rgb(221, 219, 219);
+    color: grey;
+    max-width: 500px;
+    display: block;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    margin-top: 35px;
+    margin-inline: auto;
+  }
+
+  .Single__Review__Comments___Heading {
+    color: grey;
+    margin-bottom: 0px;
+    margin-top: 18.72px;
+    padding-top: 25px;
+    padding-left: 40px;
+  }
+
+  .SingleReview__Comments__VoteButtonImage__NoPress {
+    max-width: 30px;
+    margin-inline: auto;
+    border-radius: 20px;
+  }
+
+  .SingleReview__Comments__VoteButtonImage__Press {
+    max-width: 60px;
+    margin-inline: auto;
+    border-radius: 20px;
+  }
+
+  .Single__Review__Comments___Container {
+    background-color: rgba(240, 240, 238, 0.9);
+    padding-bottom: 50px;
+    max-width: 600px;
+    padding-right: 40px;
+    margin-inline: auto;
+    border-radius: 20px;
+  }
+  .AddCommentForm_SubmitButton {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .AddCommentForm__Label {
+    color: grey;
+  }
+
+  .AddCommentForm_InputBar {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .AddCommentForm {
+    display: block;
+    background-color: rgb(201, 195, 195);
+    margin-top: 20px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: fit-content;
+    margin-left: 130px;
+    border-radius: 20px;
+  }
+
+  .Add_A_Comment {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: grey;
+  }
+}
+
+@media (max-width: 868px) {
+  .App {
+    text-align: center;
+    /* background-image: url(https://i.stack.imgur.com/jGlzr.png); */
+    background-image: linear-gradient(
+      to bottom,
+      #d9dde1,
+      #c5c8cb,
+      #b1b3b6,
+      #9d9fa1,
+      #8a8b8c
+    );
+    background-size: 4500px 9000px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+
+  .LoadingBar {
+    color: black;
+    font-size: 50px;
+    padding-bottom: 770px;
+  }
+
+  .Title {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    text-align: center;
+    padding-top: 0px;
+    margin: 0px;
+  }
+
+  .Title img {
+    color: rgb(0, 0, 0);
+    text-align-last: center;
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 10px;
     height: 100px;
+    width: 150px;
+  }
+  .Title h1 {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    text-align: center;
+    padding-top: 0px;
+    margin-bottom: 0;
+  }
+
+  .Title h1 {
+    padding-bottom: 0px;
+  }
+
+  .Home__Hello__title {
+    text-align: center;
+  }
+
+  .Home__Reviews__List {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 200px;
+  }
+
+  .Home__Reviews__List__Review {
+    background-color: rgba(240, 240, 238, 0.9);
+    max-width: fit-content;
+    display: block;
+    margin-inline: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 30px;
+    margin-top: 35px;
+  }
+
+  .Home__Reviews__Links {
+    text-decoration: none;
+    color: black;
+  }
+
+  .Home__Search__Form__Container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .Home__Search__Form {
+    background-color: rgb(101, 112, 134);
+    max-width: fit-content;
+    display: block;
+    margin-inline: auto;
+    padding-top: 14px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+    justify-content: center;
+    border-radius: 15px;
+    margin-top: 15px;
+  }
+
+  .Home__Search__Form__Label {
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: white;
+  }
+
+  .Home__Search__Form__SearchBar {
+    margin-top: 10px;
+  }
+
+  .Home__Search__Form__SubmitButton {
+    margin-top: 10px;
+  }
+
+  .CanNotClick {
+    pointer-events: none;
+    background-color: red;
+  }
+
+  .CanClick {
+    background-color: green;
+  }
+
+  .NavBar {
+    background-color: rgb(101, 112, 134);
+    height: 50px;
+    padding-top: 0px;
+    padding-bottom: 15px;
+  }
+
+  .NavBar__Links {
+    padding-bottom: -10px;
+    margin-right: 20px;
+    padding: 0px;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    top: 14px;
+    display: inline-table;
+  }
+
+  /* .NavBar__Links_Container {
+    display: list-item;
+  } */
+
+  .SingleReview {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 200px;
+  }
+  .SingleReview__Image {
+    margin-top: 48px;
+    border-radius: 35px;
+    max-height: 500px;
+    max-width: 500px;
+  }
+
+  .SingleReview__Fail__Image {
+    margin-top: 48px;
+    border-radius: 35px;
+    max-height: 300px;
+    max-width: 300px;
+  }
+
+  .SingleReview__Title {
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  .SingleReview__Text_Contents {
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 30px;
+    margin-left: 120px;
+    margin-right: 120px;
+    border-radius: 10px;
+  }
+
+  .SingleReview__Fail__Text_Contents {
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 45px;
+    margin-left: 120px;
+    margin-right: 120px;
+    border-radius: 10px;
+  }
+
+  .SingleReview__ReviewBody {
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 15px;
+  }
+
+  .SingleReview__AuthorCard__Image {
+    height: 45px;
     border-radius: 25px;
   }
 
@@ -587,6 +896,932 @@
     padding-right: 30px;
     max-width: fit-content;
     margin-left: 130px;
+    border-radius: 20px;
+  }
+
+  .Add_A_Comment {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: grey;
+  }
+}
+
+@media (max-width: 700px) {
+  .App {
+    text-align: center;
+    /* background-image: url(https://i.stack.imgur.com/jGlzr.png); */
+    background-image: linear-gradient(
+      to bottom,
+      #d9dde1,
+      #c5c8cb,
+      #b1b3b6,
+      #9d9fa1,
+      #8a8b8c
+    );
+    background-size: 4500px 9000px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+
+  .LoadingBar {
+    color: black;
+    font-size: 50px;
+    padding-bottom: 770px;
+  }
+
+  .Title {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    text-align: center;
+    padding-top: 0px;
+    margin: 0px;
+  }
+
+  .Title img {
+    color: rgb(0, 0, 0);
+    text-align-last: center;
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 10px;
+    height: 100px;
+    width: 150px;
+  }
+  .Title h1 {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    text-align: center;
+    padding-top: 0px;
+    margin-bottom: 0;
+  }
+
+  .Title h1 {
+    padding-bottom: 0px;
+  }
+
+  .Home__Hello__title {
+    text-align: center;
+  }
+
+  .Home__Reviews__List {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 200px;
+  }
+
+  .Home__Reviews__List__Review {
+    background-color: rgba(240, 240, 238, 0.9);
+    max-width: fit-content;
+    display: block;
+    margin-inline: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 30px;
+    margin-top: 35px;
+  }
+
+  .Home__Reviews__Links {
+    text-decoration: none;
+    color: black;
+  }
+
+  .Home__Search__Form__Container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .Home__Search__Form {
+    background-color: rgb(101, 112, 134);
+    max-width: fit-content;
+    display: block;
+    margin-inline: auto;
+    padding-top: 14px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+    justify-content: center;
+    border-radius: 15px;
+    margin-top: 15px;
+  }
+
+  .Home__Search__Form__Label {
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: white;
+  }
+
+  .Home__Search__Form__SearchBar {
+    margin-top: 10px;
+  }
+
+  .Home__Search__Form__SubmitButton {
+    margin-top: 10px;
+  }
+
+  .CanNotClick {
+    pointer-events: none;
+    background-color: red;
+  }
+
+  .CanClick {
+    background-color: green;
+  }
+
+  .NavBar {
+    background-color: rgb(101, 112, 134);
+    height: 50px;
+    padding-top: 0px;
+    padding-bottom: 15px;
+  }
+
+  .NavBar__Links {
+    padding-bottom: -10px;
+    margin-right: 20px;
+    padding: 0px;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    top: 14px;
+    display: inline-table;
+  }
+
+  /* .NavBar__Links_Container {
+    display: list-item;
+  } */
+
+  .SingleReview {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 200px;
+  }
+  .SingleReview__Image {
+    margin-top: 25px;
+    border-radius: 35px;
+    max-height: 400px;
+    max-width: 400px;
+  }
+
+  .SingleReview__Fail__Image {
+    margin-top: 25px;
+    border-radius: 35px;
+    max-height: 300px;
+    max-width: 300px;
+  }
+
+  .SingleReview__Title {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .SingleReview__Text_Contents {
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 45px;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-radius: 10px;
+  }
+
+  .SingleReview__Fail__Text_Contents {
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 45px;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-radius: 10px;
+  }
+
+  .SingleReview__ReviewBody {
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 15px;
+  }
+
+  .SingleReview__AuthorCard__Image {
+    height: 35px;
+    border-radius: 25px;
+  }
+
+  .SingleReview__Fail__AuthorCard__Image {
+    height: 100px;
+    border-radius: 25px;
+  }
+
+  .SingleReview__AuthorCard__Author {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .SingleReview__AuthorCard__PostedAt {
+    margin-top: 0px;
+  }
+
+  .Single__Review__Comments__List {
+  }
+
+  .Single__Review__Comment {
+    background-color: rgb(221, 219, 219);
+    color: grey;
+    max-width: 500px;
+    display: block;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    margin-top: 35px;
+    margin-inline: auto;
+    font-size: 16px;
+  }
+
+  .Single__Review__Comments___Heading {
+    color: grey;
+    margin-bottom: 0px;
+    margin-top: 18.72px;
+    padding-top: 25px;
+    padding-left: 40px;
+  }
+
+  .SingleReview__Comments__VoteButtonImage__NoPress {
+    max-width: 30px;
+    margin-inline: auto;
+    border-radius: 20px;
+  }
+
+  .SingleReview__Comments__VoteButtonImage__Press {
+    max-width: 60px;
+    margin-inline: auto;
+    border-radius: 20px;
+  }
+
+  .Single__Review__Comments___Container {
+    background-color: rgba(240, 240, 238, 0.9);
+    padding-bottom: 50px;
+    max-width: 400px;
+    padding-right: 40px;
+    margin-inline: auto;
+    border-radius: 20px;
+  }
+  .AddCommentForm_SubmitButton {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .AddCommentForm__Label {
+    color: grey;
+  }
+
+  .AddCommentForm_InputBar {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .AddCommentForm {
+    display: block;
+    background-color: rgb(201, 195, 195);
+    margin-top: 20px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: fit-content;
+    margin-left: auto;
+    border-radius: 20px;
+  }
+
+  .Add_A_Comment {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: grey;
+  }
+}
+
+@media (max-width: 473px) {
+  .App {
+    text-align: center;
+    /* background-image: url(https://i.stack.imgur.com/jGlzr.png); */
+    background-image: linear-gradient(
+      to bottom,
+      #d9dde1,
+      #c5c8cb,
+      #b1b3b6,
+      #9d9fa1,
+      #8a8b8c
+    );
+    background-size: 4500px 9000px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+
+  .LoadingBar {
+    color: black;
+    font-size: 50px;
+    padding-bottom: 770px;
+  }
+
+  .Title {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    text-align: center;
+    padding-top: 0px;
+    margin: 0px;
+  }
+
+  .Title img {
+    color: rgb(0, 0, 0);
+    text-align-last: center;
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 10px;
+    height: 100px;
+    width: 150px;
+  }
+  .Title h1 {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    text-align: center;
+    padding-top: 0px;
+    margin-bottom: 0;
+  }
+
+  .Title h1 {
+    padding-bottom: 0px;
+  }
+
+  .Home__Hello__title {
+    text-align: center;
+  }
+
+  .Home__Reviews__List {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 200px;
+  }
+
+  .Home__Reviews__List__Review {
+    background-color: rgba(240, 240, 238, 0.9);
+    max-width: fit-content;
+    display: block;
+    margin-inline: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 30px;
+    margin-top: 35px;
+  }
+
+  .Home__Reviews__Links {
+    text-decoration: none;
+    color: black;
+  }
+
+  .Home__Search__Form__Container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .Home__Search__Form {
+    background-color: rgb(101, 112, 134);
+    max-width: fit-content;
+    display: block;
+    margin-inline: auto;
+    padding-top: 14px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+    justify-content: center;
+    border-radius: 15px;
+    margin-top: 15px;
+  }
+
+  .Home__Search__Form__Label {
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: white;
+  }
+
+  .Home__Search__Form__SearchBar {
+    margin-top: 10px;
+  }
+
+  .Home__Search__Form__SubmitButton {
+    margin-top: 10px;
+  }
+
+  .CanNotClick {
+    pointer-events: none;
+    background-color: red;
+  }
+
+  .CanClick {
+    background-color: green;
+  }
+
+  .NavBar {
+    background-color: rgb(101, 112, 134);
+    height: 50px;
+    padding-top: 0px;
+    padding-bottom: 35px;
+  }
+
+  .NavBar__Links {
+    padding-bottom: -10px;
+    margin-right: 20px;
+    padding: 0px;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    top: 14px;
+    display: inline-table;
+  }
+
+  /* .NavBar__Links_Container {
+    display: list-item;
+  } */
+
+  .SingleReview {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 200px;
+  }
+  .SingleReview__Image {
+    margin-top: 20px;
+    border-radius: 35px;
+    max-height: 350px;
+    max-width: 350px;
+  }
+
+  .SingleReview__Fail__Image {
+    margin-top: 48px;
+    border-radius: 35px;
+    max-height: 300px;
+    max-width: 300px;
+  }
+
+  .SingleReview__Title {
+    font-size: 60;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .SingleReview__Text_Contents {
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+
+  .SingleReview__Fail__Text_Contents {
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+
+  .SingleReview__ReviewBody {
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 17px;
+  }
+
+  .SingleReview__AuthorCard__Image {
+    height: 30px;
+    border-radius: 25px;
+  }
+
+  .SingleReview__Fail__AuthorCard__Image {
+    height: 30px;
+    border-radius: 25px;
+  }
+
+  .SingleReview__AuthorCard__Author {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .SingleReview__AuthorCard__PostedAt {
+    margin-top: 0px;
+  }
+
+  .Single__Review__Comments__List {
+  }
+
+  .Single__Review__Comment {
+    background-color: rgb(221, 219, 219);
+    color: grey;
+    max-width: 500px;
+    display: block;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    margin-top: 35px;
+    margin-inline: auto;
+    font-size: 10px;
+  }
+
+  .Single__Review__Comments___Heading {
+    color: grey;
+    margin-bottom: 0px;
+    margin-top: 18.72px;
+    padding-top: 25px;
+    padding-left: 40px;
+  }
+
+  .SingleReview__Comments__VoteButtonImage__NoPress {
+    max-width: 30px;
+    margin-inline: auto;
+    border-radius: 20px;
+  }
+
+  .SingleReview__Comments__VoteButtonImage__Press {
+    max-width: 60px;
+    margin-inline: auto;
+    border-radius: 20px;
+  }
+
+  .Single__Review__Comments___Container {
+    background-color: rgba(240, 240, 238, 0.9);
+    padding-bottom: 50px;
+    max-width: 350px;
+    padding-right: 40px;
+    margin-inline: auto;
+    border-radius: 20px;
+  }
+  .AddCommentForm_SubmitButton {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .AddCommentForm__Label {
+    color: grey;
+  }
+
+  .AddCommentForm_InputBar {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .AddCommentForm {
+    display: block;
+    background-color: rgb(201, 195, 195);
+    margin-top: 20px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 300px;
+    margin-left: 30px;
+    border-radius: 20px;
+  }
+
+  .Add_A_Comment {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: grey;
+  }
+}
+
+@media (max-width: 370px) {
+  .App {
+    text-align: center;
+    /* background-image: url(https://i.stack.imgur.com/jGlzr.png); */
+    background-image: linear-gradient(
+      to bottom,
+      #d9dde1,
+      #c5c8cb,
+      #b1b3b6,
+      #9d9fa1,
+      #8a8b8c
+    );
+    background-size: 4500px 9000px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+
+  .LoadingBar {
+    color: black;
+    font-size: 50px;
+    padding-bottom: 770px;
+  }
+
+  .Title {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    text-align: center;
+    padding-top: 0px;
+    margin: 0px;
+  }
+
+  .Title img {
+    color: rgb(0, 0, 0);
+    text-align-last: center;
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 10px;
+    height: 100px;
+    width: 150px;
+  }
+  .Title h1 {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    text-align: center;
+    padding-top: 0px;
+    margin-bottom: 0;
+  }
+
+  .Title h1 {
+    padding-bottom: 0px;
+  }
+
+  .Home__Hello__title {
+    text-align: center;
+  }
+
+  .Home__Reviews__List {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 200px;
+  }
+
+  .Home__Reviews__List__Review {
+    background-color: rgba(240, 240, 238, 0.9);
+    max-width: fit-content;
+    display: block;
+    margin-inline: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 30px;
+    margin-top: 35px;
+  }
+
+  .Home__Reviews__Links {
+    text-decoration: none;
+    color: black;
+  }
+
+  .Home__Search__Form__Container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .Home__Search__Form {
+    background-color: rgb(101, 112, 134);
+    max-width: fit-content;
+    display: block;
+    margin-inline: auto;
+    padding-top: 14px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+    justify-content: center;
+    border-radius: 15px;
+    margin-top: 15px;
+  }
+
+  .Home__Search__Form__Label {
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: white;
+  }
+
+  .Home__Search__Form__SearchBar {
+    margin-top: 10px;
+  }
+
+  .Home__Search__Form__SubmitButton {
+    margin-top: 10px;
+  }
+
+  .CanNotClick {
+    pointer-events: none;
+    background-color: red;
+  }
+
+  .CanClick {
+    background-color: green;
+  }
+
+  .NavBar {
+    background-color: rgb(101, 112, 134);
+    height: 50px;
+    padding-top: 0px;
+    padding-bottom: 35px;
+  }
+
+  .NavBar__Links {
+    padding-bottom: -10px;
+    margin-right: 20px;
+    padding: 0px;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    top: 14px;
+    display: inline-table;
+  }
+
+  /* .NavBar__Links_Container {
+    display: list-item;
+  } */
+
+  .SingleReview {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 200px;
+  }
+  .SingleReview__Image {
+    margin-top: 30px;
+    border-radius: 35px;
+    max-height: 290px;
+    max-width: 290px;
+  }
+
+  .SingleReview__Fail__Image {
+    margin-top: 48px;
+    border-radius: 35px;
+    max-height: 300px;
+    max-width: 300px;
+  }
+
+  .SingleReview__Title {
+    font-size: 60;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .SingleReview__Text_Contents {
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+
+  .SingleReview__Fail__Text_Contents {
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+
+  .SingleReview__ReviewBody {
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 15px;
+  }
+
+  .SingleReview__AuthorCard__Image {
+    height: 30px;
+    border-radius: 25px;
+  }
+
+  .SingleReview__Fail__AuthorCard__Image {
+    height: 65px;
+    border-radius: 25px;
+  }
+
+  .SingleReview__AuthorCard__Author {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .SingleReview__AuthorCard__PostedAt {
+    margin-top: 0px;
+  }
+
+  .Single__Review__Comments__List {
+  }
+
+  .Single__Review__Comment {
+    background-color: rgb(221, 219, 219);
+    color: grey;
+    max-width: 500px;
+    display: block;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    margin-top: 35px;
+    margin-inline: auto;
+    font-size: 10px;
+  }
+
+  .Single__Review__Comments___Heading {
+    color: grey;
+    margin-bottom: 0px;
+    margin-top: 18.72px;
+    padding-top: 25px;
+    padding-left: 40px;
+  }
+
+  .SingleReview__Comments__VoteButtonImage__NoPress {
+    max-width: 30px;
+    margin-inline: auto;
+    border-radius: 20px;
+  }
+
+  .SingleReview__Comments__VoteButtonImage__Press {
+    max-width: 60px;
+    margin-inline: auto;
+    border-radius: 20px;
+  }
+
+  .Single__Review__Comments___Container {
+    background-color: rgba(240, 240, 238, 0.9);
+    padding-bottom: 50px;
+    max-width: 290px;
+    padding-right: 40px;
+    margin-inline: auto;
+    border-radius: 20px;
+  }
+
+  /* .SingleReview__Text_Contents {
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+  } */
+
+  .AddCommentForm_SubmitButton {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .AddCommentForm__Label {
+    color: grey;
+  }
+
+  .AddCommentForm_InputBar {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
+  .AddCommentForm {
+    display: block;
+    background-color: rgb(201, 195, 195);
+    margin-top: 20px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 30px;
+    max-width: 300px;
+    margin-left: 40px;
     border-radius: 20px;
   }
 
