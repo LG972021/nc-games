@@ -7,12 +7,15 @@ const AddCommentForm = ({
   setCommentsLoading,
   setCommentAddError,
 }) => {
-  const [newComment, setNewComment] = useState({ username: "", body: "" });
+  const [newComment, setNewComment] = useState({
+    username: "grumpy19",
+    body: "",
+  });
 
   const handleChange = (event) => {
     setNewComment((currentNewComment) => {
       const updatedNewComment = { ...currentNewComment };
-      updatedNewComment[event.target.name] = event.target.value;
+      updatedNewComment.body = event.target.value;
       return updatedNewComment;
     });
   };
@@ -50,7 +53,7 @@ const AddCommentForm = ({
           type="text"
           name="username"
           required
-          onChange={handleChange}
+          readOnly={true}
           value={newComment.username}
           className="AddCommentForm_InputBar"
         ></input>

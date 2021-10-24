@@ -151,14 +151,14 @@
     padding-bottom: 200px;
   }
   .SingleReview__Image {
-    margin-top: 48px;
+    margin-top: 0px;
     border-radius: 35px;
     max-height: 1000px;
     max-width: 1000px;
   }
 
   .SingleReview__Fail__Image {
-    margin-top: 48px;
+    margin-top: 0px;
     border-radius: 35px;
     max-height: 300px;
     max-width: 300px;
@@ -455,14 +455,14 @@
     padding-bottom: 200px;
   }
   .SingleReview__Image {
-    margin-top: 48px;
+    margin-top: 0px;
     border-radius: 35px;
     max-height: 500px;
     max-width: 500px;
   }
 
   .SingleReview__Fail__Image {
-    margin-top: 48px;
+    margin-top: 0px;
     border-radius: 35px;
     max-height: 300px;
     max-width: 300px;
@@ -759,14 +759,14 @@
     padding-bottom: 200px;
   }
   .SingleReview__Image {
-    margin-top: 48px;
+    margin-top: 0px;
     border-radius: 35px;
     max-height: 500px;
     max-width: 500px;
   }
 
   .SingleReview__Fail__Image {
-    margin-top: 48px;
+    margin-top: 0px;
     border-radius: 35px;
     max-height: 300px;
     max-width: 300px;
@@ -1063,14 +1063,14 @@
     padding-bottom: 200px;
   }
   .SingleReview__Image {
-    margin-top: 25px;
+    margin-top: 0px;
     border-radius: 35px;
     max-height: 400px;
     max-width: 400px;
   }
 
   .SingleReview__Fail__Image {
-    margin-top: 25px;
+    margin-top: 0px;
     border-radius: 35px;
     max-height: 300px;
     max-width: 300px;
@@ -1368,14 +1368,14 @@
     padding-bottom: 200px;
   }
   .SingleReview__Image {
-    margin-top: 20px;
+    margin-top: 5px;
     border-radius: 35px;
     max-height: 350px;
     max-width: 350px;
   }
 
   .SingleReview__Fail__Image {
-    margin-top: 48px;
+    margin-top: 5px;
     border-radius: 35px;
     max-height: 300px;
     max-width: 300px;
@@ -1673,14 +1673,14 @@
     padding-bottom: 200px;
   }
   .SingleReview__Image {
-    margin-top: 30px;
+    margin-top: 10px;
     border-radius: 35px;
     max-height: 290px;
     max-width: 290px;
   }
 
   .SingleReview__Fail__Image {
-    margin-top: 48px;
+    margin-top: 10px;
     border-radius: 35px;
     max-height: 300px;
     max-width: 300px;

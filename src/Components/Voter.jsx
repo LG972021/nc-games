@@ -2,7 +2,6 @@ import { useState } from "react";
 import axios from "axios";
 
 const Voter = ({ review, reviewLoading, setReviewLoading }) => {
-  // const [isLoading, setIsLoading] = useState(false);
   const [votePressed, setVotePressed] = useState(false);
   const [voteChange, setVoteChange] = useState(0);
   const [voteClass, setVoteClass] = useState(

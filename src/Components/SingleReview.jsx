@@ -80,8 +80,7 @@ const SingleReview = () => {
               by {review.owner}{" "}
             </p>
             <p className="SingleReview__AuthorCard__PostedAt">
-              {" "}
-              posted at {review.created_at}{" "}
+              posted at {String(review.created_at).substring(0, 10)}
             </p>
           </div>
           {Object.keys(review).length ? (

@@ -11,11 +11,11 @@ const Home = () => {
   const [searchButtonClass, setSearchButtonClass] = useState("CanNotClick");
   const [isError, setIsError] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const [badCategory, setBadCategory] = useState(false);
   const { category, sort_by } = useParams();
 
   const createSearchURL = () => {
     if (category === undefined && sort_by === undefined) {
-      // console.log("https://nc-board-game-reviewing.herokuapp.com/api/reviews");
       return "https://nc-board-game-reviewing.herokuapp.com/api/reviews";
     } else if (sort_by === undefined) {
       return `https://nc-board-game-reviewing.herokuapp.com/api/reviews?cat=${category}`;
@@ -32,6 +32,7 @@ const Home = () => {
   useEffect(() => {
     setIsLoading(true);
     setIsError(false);
+    setBadCategory(false);
     axios
       .get(searchUrl)
       .then((response) => {
@@ -41,12 +42,15 @@ const Home = () => {
         return response.data.reviews;
       })
       .catch((error) => {
-        setIsLoading(false);
-        setIsError(true);
+        if (error.response.data.msg === "Cannot filter by that category") {
+          setIsLoading(false);
+          setBadCategory(true);
+        } else {
+          setIsLoading(false);
+          setIsError(true);
+        }
       });
   }, [category, searchUrl]);
-
-  // console.log(searchButtonClass);
 
   const handleChange = (event) => {
     SetSearchReviewId(event.target.value);
@@ -58,7 +62,6 @@ const Home = () => {
     } else {
       setSearchButtonClass("CanClick");
     }
-    console.log(event.target.value);
   };
 
   const handleSubmit = (event) => {
@@ -69,6 +72,14 @@ const Home = () => {
     return (
       <section className="SingleReview">
         <h1>We're Sorry, Something Went Wrong...</h1>
+      </section>
+    );
+  }
+
+  if (badCategory === true) {
+    return (
+      <section className="SingleReview">
+        <h1>We're Sorry, that category doesn't exist...</h1>
       </section>
     );
   }
@@ -84,12 +95,7 @@ const Home = () => {
               to={`/reviews/categories/${category}/sort_by/created_at`}
               className="CanClick"
             >
-              <button
-                className="Home__Search__Form__SubmitButton"
-                onClick={() => {
-                  console.log("Click");
-                }}
-              >
+              <button className="Home__Search__Form__SubmitButton">
                 Sort By: created_at
               </button>
             </Link>
@@ -97,12 +103,7 @@ const Home = () => {
               to={`/reviews/categories/${category}/sort_by/votes`}
               className="CanClick"
             >
-              <button
-                className="Home__Search__Form__SubmitButton"
-                onClick={() => {
-                  console.log("Click");
-                }}
-              >
+              <button className="Home__Search__Form__SubmitButton">
                 Sort By: Votes
               </button>
             </Link>{" "}
@@ -161,7 +162,7 @@ const Home = () => {
                 >
                   <h2>{review.title}</h2>
                   <p> by {review.owner} </p>
-                  <p> posted at {review.created_at} </p>
+                  <p> posted at {String(review.created_at).substring(0, 10)}</p>
                   <p>Review id: {review.review_id}</p>
                 </Link>
               </li>

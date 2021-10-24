@@ -44,7 +44,7 @@ const NavBar = () => {
           </Link>
         </div>
       </nav>
-      <p>Logged in as: grump19 </p>
+      <p>Logged in as: grumpy19 </p>
     </>
   );
 };

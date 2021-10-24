@@ -39,7 +39,7 @@ const Comments = ({ review_id }) => {
               <li className="Single__Review__Comment" key={comment.comment_id}>
                 <h2>{comment.body}</h2>
                 <p> - {comment.author} </p>
-                <p> posted {comment.created_at} </p>
+                <p> posted {String(comment.created_at).substring(0, 10)} </p>
                 <p>Comment id: {comment.comment_id}</p>
               </li>
             );
