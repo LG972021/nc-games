@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import API from "../utils.js/APICalls";
 
 const Voter = ({ review, reviewLoading, setReviewLoading }) => {
   const [votePressed, setVotePressed] = useState(false);
@@ -26,11 +26,7 @@ const Voter = ({ review, reviewLoading, setReviewLoading }) => {
               setVotePressed(true);
               setVoteClass("SingleReview__Comments__VoteButtonImage__Press");
             }
-            axios
-              .patch(
-                `https://nc-board-game-reviewing.herokuapp.com/api/reviews/${review.review_id}`,
-                { inc_votes: 1 }
-              )
+            API.patch(`reviews/${review.review_id}`, { inc_votes: 1 })
               .then((response) => {
                 setReviewLoading(false);
               })

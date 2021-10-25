@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import AddCommentForm from "./AddCommentForm";
+import API from "../utils.js/APICalls";
 
 const Comments = ({ review_id }) => {
   const [reviewCommentList, setReviewCommentList] = useState([]);
@@ -11,10 +11,7 @@ const Comments = ({ review_id }) => {
   useEffect(() => {
     setCommentsLoading(true);
     setCommentsError(false);
-    axios
-      .get(
-        `https://nc-board-game-reviewing.herokuapp.com/api/reviews/${review_id}/comments`
-      )
+    API.get(`reviews/${review_id}/comments`)
       .then((response) => {
         setReviewCommentList(response.data.comments);
         setCommentsLoading(false);

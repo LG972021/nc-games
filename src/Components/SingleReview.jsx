@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { useParams } from "react-router";
 import Icon from "../Icon.png";
 import Voter from "./Voter";
 import Comments from "./Comments";
+import API from "../utils.js/APICalls";
 
 const SingleReview = () => {
   const [review, setReview] = useState({});
@@ -15,10 +15,7 @@ const SingleReview = () => {
   useEffect(() => {
     setReviewLoading(true);
     setReviewError(false);
-    axios
-      .get(
-        `https://nc-board-game-reviewing.herokuapp.com/api/reviews/${review_id}`
-      )
+    API.get(`reviews/${review_id}`)
       .then((response) => {
         setReview(response.data.review);
 

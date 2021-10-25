@@ -2,8 +2,8 @@ import React from "react";
 
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import API from "../utils.js/APICalls";
 
 const Home = () => {
   const [reviewsList, setReviewsList] = useState([]);
@@ -16,13 +16,13 @@ const Home = () => {
 
   const createSearchURL = () => {
     if (category === undefined && sort_by === undefined) {
-      return "https://nc-board-game-reviewing.herokuapp.com/api/reviews";
+      return "reviews";
     } else if (sort_by === undefined) {
-      return `https://nc-board-game-reviewing.herokuapp.com/api/reviews?cat=${category}`;
+      return `reviews?cat=${category}`;
     } else if (category === undefined) {
-      return `https://nc-board-game-reviewing.herokuapp.com/api/reviews?sort_by=${sort_by}`;
+      return `reviews?sort_by=${sort_by}`;
     } else {
-      return `https://nc-board-game-reviewing.herokuapp.com/api/reviews?cat=${category}&sort_by=${sort_by}`;
+      return `reviews?cat=${category}&sort_by=${sort_by}`;
     }
   };
 
@@ -33,8 +33,7 @@ const Home = () => {
     setIsLoading(true);
     setIsError(false);
     setBadCategory(false);
-    axios
-      .get(searchUrl)
+    API.get(searchUrl)
       .then((response) => {
         setReviewsList(response.data.reviews);
         setIsLoading(false);

@@ -1,5 +1,5 @@
-import axios from "axios";
 import { useState } from "react";
+import API from "../utils.js/APICalls";
 
 const AddCommentForm = ({
   setReviewCommentList,
@@ -23,11 +23,7 @@ const AddCommentForm = ({
   const handleSubmit = (event) => {
     event.preventDefault();
     setCommentsLoading(true);
-    axios
-      .post(
-        `https://nc-board-game-reviewing.herokuapp.com/api/reviews/${review_id}/comments`,
-        newComment
-      )
+    API.post(`reviews/${review_id}/comments`, newComment)
       .then((response) => {
         setReviewCommentList((currentReviewCommentList) => {
           const updatedReviewCommentList = [...currentReviewCommentList];
@@ -77,6 +73,3 @@ const AddCommentForm = ({
 };
 
 export default AddCommentForm;
-
-// username: "dav3rid",
-// body: "This is the body of the test review",
