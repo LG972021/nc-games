@@ -30,7 +30,7 @@ To install the dependencies this project relies on, please follow the instructio
 
 <h2>Requirements</h2>
 
-The versions of Node.js and other softwares used to create this project, and thus, the minimum versions of Node.js required to reliably run this project are:
+The versions of Node.js and other softwares used to create this project, and thus - the minimum versions of Node.js required to reliably run this project are:
 
     - Node.js - v16.6.1
 
